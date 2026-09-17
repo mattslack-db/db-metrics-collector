@@ -1,0 +1,35 @@
+────────────────────────────────────────────────────────────
+  Server : prod-pg
+  Cloud  : azure / postgres-flexible
+  Source : Standard_D4ds_v5  [4 vCPU / 16.0 GB]
+  Observed:
+    CPU  avg=35.0%  peak=70.0%
+    Mem  avg=9.3 GB  peak=12.5 GB
+  Recommendation:
+    7–9 CU (autoscaling)
+  Cost   : $1,788–$2,300/mo  (placeholder rate)
+────────────────────────────────────────────────────────────
+  Server : prod-rds
+  Cloud  : aws / rds
+  Source : db.m6i.large  [2 vCPU / 8.0 GB]
+  Observed:
+    CPU  avg=40.0%  peak=75.0%
+    Mem  avg=4.0 GB  peak=6.5 GB
+  Recommendation:
+    3–5 CU (autoscaling)
+  Cost   : $766–$1,278/mo  (placeholder rate)
+============================================================
+  FLEET SUMMARY
+============================================================
+  Total servers      : 2
+  Fixed-tier servers : 0
+  Unknown-SKU servers: 0
+  Skipped files      : 0
+
+  Autoscaling CU band totals (dynamic rows only):
+    Min CU sum : 10
+    Max CU sum : 14
+
+  Estimated monthly cost totals:
+    Cost range : $2,555–$3,577/mo
+============================================================

@@ -1,0 +1,56 @@
+{
+  "collected_at": "2026-09-12T10:00:00.000000Z",
+  "name": "prod-pg-errored",
+  "cloud": "azure",
+  "service": "postgres-flexible",
+  "resource_scope": "/subscriptions/sub-1/resourceGroups/rg-demo/providers/Microsoft.DBforPostgreSQL/flexibleServers/prod-pg-errored",
+  "window": {
+    "start": "2026-09-12T09:00:00.000000Z",
+    "end": "2026-09-12T10:00:00.000000Z",
+    "interval": "PT5M"
+  },
+  "inventory": {
+    "server": {
+      "name": "prod-pg-errored",
+      "sku": {"name": "Standard_D4ds_v5", "tier": "GeneralPurpose"}
+    }
+  },
+  "metric_definitions": [],
+  "metrics": [
+    {
+      "name": "cpu_percent",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": "throttled",
+      "timeseries": []
+    },
+    {
+      "name": "memory_percent",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 61.0,
+              "min": 40.0,
+              "max": 72.0,
+              "avg": 58.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 65.0,
+              "min": 44.0,
+              "max": 78.0,
+              "avg": 62.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

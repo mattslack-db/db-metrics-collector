@@ -1,0 +1,54 @@
+{
+  "collected_at": "2026-09-12T10:00:00.000000Z",
+  "name": "prod-mi",
+  "cloud": "azure",
+  "service": "sql-managed-instance",
+  "resource_scope": "/subscriptions/sub-1/resourceGroups/rg-demo/providers/Microsoft.Sql/managedInstances/prod-mi",
+  "window": {
+    "start": "2026-09-12T09:00:00.000000Z",
+    "end": "2026-09-12T10:00:00.000000Z",
+    "interval": "PT5M"
+  },
+  "inventory": {
+    "server": {
+      "name": "prod-mi",
+      "location": "eastus",
+      "state": "Ready"
+    }
+  },
+  "metric_definitions": [],
+  "metrics": [
+    {
+      "name": "avg_cpu_percent",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {"latest": 32.0, "min": 10.0, "max": 45.0, "avg": 30.0, "count": 12},
+            "maximum": {"latest": 50.0, "min": 20.0, "max": 55.0, "avg": 42.0, "count": 12}
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage_space_used_mb",
+      "unit": "Count",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {"latest": 49152.0, "min": 40960.0, "max": 51200.0, "avg": 47000.0, "count": 12},
+            "maximum": {"latest": 51200.0, "min": 45056.0, "max": 51200.0, "avg": 49000.0, "count": 12}
+          }
+        }
+      ]
+    }
+  ]
+}

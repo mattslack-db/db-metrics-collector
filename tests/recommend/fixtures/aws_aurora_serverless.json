@@ -1,0 +1,94 @@
+{
+  "collected_at": "2026-09-12T10:00:00.000000Z",
+  "name": "prod-aurora",
+  "cloud": "aws",
+  "service": "aurora",
+  "resource_scope": "arn:aws:rds:us-east-1:123456789012:cluster:prod-aurora",
+  "window": {
+    "start": "2026-09-12T09:00:00.000000Z",
+    "end": "2026-09-12T10:00:00.000000Z",
+    "interval": "PT5M"
+  },
+  "inventory": {
+    "server": {
+      "name": "prod-aurora",
+      "engine": "aurora-postgresql",
+      "members": [
+        {
+          "identifier": "w",
+          "is_writer": true,
+          "class": "db.r6g.xlarge"
+        }
+      ],
+      "serverless_v2": {
+        "min_acu": 2,
+        "max_acu": 16
+      }
+    },
+    "metric_scope": {
+      "namespace": "AWS/RDS",
+      "dimensions": {
+        "DBClusterIdentifier": "prod-aurora"
+      }
+    }
+  },
+  "metric_definitions": [],
+  "metrics": [
+    {
+      "name": "CPUUtilization",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 28.0,
+              "min": 5.0,
+              "max": 60.0,
+              "avg": 25.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 42.0,
+              "min": 15.0,
+              "max": 65.0,
+              "avg": 40.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FreeableMemory",
+      "unit": "Bytes",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 9126805504,
+              "min": 4294967296,
+              "max": 15032385536,
+              "avg": 8589934592,
+              "count": 12
+            },
+            "minimum": {
+              "latest": 4831838208,
+              "min": 3221225472,
+              "max": 8589934592,
+              "avg": 5368709120,
+              "count": 12
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

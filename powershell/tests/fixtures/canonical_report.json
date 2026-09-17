@@ -1,0 +1,154 @@
+{
+  "collected_at": "2026-01-01T00:00:00.0000000Z",
+  "name": "pg-server",
+  "cloud": "azure",
+  "service": "postgres-flexible",
+  "resource_scope": "/subscriptions/sub1/resourceGroups/rg1/providers/Microsoft.DBforPostgreSQL/flexibleServers/pg-server",
+  "window": {
+    "start": "2026-01-01T00:00:00.0000000Z",
+    "end": "2026-01-01T01:00:00.0000000Z",
+    "interval": "PT1M"
+  },
+  "inventory": {
+    "resource_id": "/subscriptions/sub1/resourceGroups/rg1/providers/Microsoft.DBforPostgreSQL/flexibleServers/pg-server",
+    "server": {
+      "id": "/subscriptions/sub1/resourceGroups/rg1/providers/Microsoft.DBforPostgreSQL/flexibleServers/pg-server",
+      "name": "pg-server",
+      "location": "eastus",
+      "state": "Ready",
+      "version": "16",
+      "minor_version": "2",
+      "fully_qualified_domain_name": "pg-server.postgres.database.azure.com",
+      "administrator_login": "adminuser",
+      "availability_zone": "1",
+      "sku": {
+        "name": "Standard_D2s_v3",
+        "tier": "GeneralPurpose"
+      },
+      "storage": {
+        "size_gb": 32,
+        "tier": "P4",
+        "iops": 120,
+        "auto_grow": "Disabled",
+        "auto_io_scaling": "Disabled",
+        "type": "Premium_LRS"
+      },
+      "high_availability": {
+        "mode": "Disabled",
+        "state": "NotEnabled",
+        "standby_availability_zone": ""
+      },
+      "backup": {
+        "retention_days": 7,
+        "geo_redundant_backup": "Disabled",
+        "earliest_restore_date": "2026-01-01T00:00:00Z"
+      },
+      "network": {
+        "public_network_access": "Enabled",
+        "delegated_subnet_resource_id": null,
+        "private_dns_zone_resource_id": null
+      },
+      "maintenance_window": {
+        "custom_window": "Disabled",
+        "day_of_week": 0,
+        "start_hour": 0,
+        "start_minute": 0
+      }
+    },
+    "parameters": [
+      {
+        "name": "max_connections",
+        "value": "50",
+        "default_value": "50",
+        "source": "system-default",
+        "is_dynamic_config": false,
+        "is_read_only": false,
+        "is_non_default": false,
+        "unit": null,
+        "description": "Max connections"
+      }
+    ],
+    "parameters_non_default": [],
+    "databases": ["postgres", "azure_sys"]
+  },
+  "metric_definitions": [
+    {
+      "name": "cpu_percent",
+      "unit": "Percent",
+      "aggregations": ["Average", "Maximum"],
+      "dimensions": ["DatabaseName"],
+      "granularities": ["PT1M", "PT5M"]
+    },
+    {
+      "name": "memory_percent",
+      "unit": "Percent",
+      "aggregations": ["Average"],
+      "dimensions": [],
+      "granularities": ["PT1M", "PT5M"]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "cpu_percent",
+      "unit": "Percent",
+      "granularity": "PT1M",
+      "timeseries": [
+        {
+          "dimensions": {
+            "DatabaseName": "mydb"
+          },
+          "points": [
+            {
+              "timestamp": "2026-01-01T00:00:00Z",
+              "average": 25.5,
+              "maximum": 40.0
+            }
+          ],
+          "summary": {
+            "average": {
+              "latest": 25.5,
+              "min": 25.5,
+              "max": 25.5,
+              "avg": 25.5,
+              "count": 1
+            },
+            "maximum": {
+              "latest": 40.0,
+              "min": 40.0,
+              "max": 40.0,
+              "avg": 40.0,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "memory_percent",
+      "unit": "Percent",
+      "granularity": "PT1M",
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [
+            {
+              "timestamp": "2026-01-01T00:00:00Z",
+              "average": 60.0
+            }
+          ],
+          "summary": {
+            "average": {
+              "latest": 60.0,
+              "min": 60.0,
+              "max": 60.0,
+              "avg": 60.0,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "error": null
+    }
+  ]
+}

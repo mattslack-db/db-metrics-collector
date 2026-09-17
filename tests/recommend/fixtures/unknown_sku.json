@@ -1,0 +1,209 @@
+{
+  "collected_at": "2026-09-12T10:00:00.000000Z",
+  "name": "prod-pg",
+  "cloud": "azure",
+  "service": "postgres-flexible",
+  "resource_scope": "/subscriptions/sub-1/resourceGroups/rg-demo/providers/Microsoft.DBforPostgreSQL/flexibleServers/prod-pg",
+  "window": {
+    "start": "2026-09-12T09:00:00.000000Z",
+    "end": "2026-09-12T10:00:00.000000Z",
+    "interval": "PT5M"
+  },
+  "inventory": {
+    "databases": ["app", "analytics"],
+    "resource_id": "/subscriptions/sub-1/resourceGroups/rg-demo/providers/Microsoft.DBforPostgreSQL/flexibleServers/prod-pg",
+    "parameters_non_default": [],
+    "parameters": [],
+    "server": {
+      "name": "prod-pg",
+      "location": "eastus",
+      "state": "Ready",
+      "version": "15",
+      "sku": {
+        "name": "Standard_ZZ99_bogus",
+        "tier": "GeneralPurpose"
+      },
+      "storage": {
+        "size_gb": 128,
+        "iops": 500,
+        "auto_grow": "Enabled",
+        "type": "Premium_LRS"
+      },
+      "high_availability": {
+        "mode": "ZoneRedundant",
+        "state": "Healthy"
+      }
+    }
+  },
+  "metric_definitions": [],
+  "metrics": [
+    {
+      "name": "cpu_percent",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 38.0,
+              "min": 8.0,
+              "max": 65.0,
+              "avg": 35.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 66.0,
+              "min": 20.0,
+              "max": 70.0,
+              "avg": 52.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "memory_percent",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 61.0,
+              "min": 40.0,
+              "max": 72.0,
+              "avg": 58.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 65.0,
+              "min": 44.0,
+              "max": 78.0,
+              "avg": 62.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "active_connections",
+      "unit": "Count",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 85.0,
+              "min": 50.0,
+              "max": 100.0,
+              "avg": 80.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 100.0,
+              "min": 55.0,
+              "max": 120.0,
+              "avg": 95.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "max_connections",
+      "unit": "Count",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 859.0,
+              "min": 859.0,
+              "max": 859.0,
+              "avg": 859.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 859.0,
+              "min": 859.0,
+              "max": 859.0,
+              "avg": 859.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "iops",
+      "unit": "Count",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 210.0,
+              "min": 50.0,
+              "max": 350.0,
+              "avg": 200.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 320.0,
+              "min": 80.0,
+              "max": 480.0,
+              "avg": 300.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "storage_used",
+      "unit": "Bytes",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 41875931136,
+              "min": 37580963840,
+              "max": 41875931136,
+              "avg": 40265318400,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 41875931136,
+              "min": 37580963840,
+              "max": 42949672960,
+              "avg": 40802189312,
+              "count": 12
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "name": "prod-pg",
+      "cloud": "azure",
+      "service": "postgres-flexible",
+      "metric_count": 6,
+      "error_count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "prod-rds",
+      "cloud": "aws",
+      "service": "rds",
+      "metric_count": 6,
+      "error_count": 0,
+      "status": "ok"
+    }
+  ],
+  "target_count": 2,
+  "error_target_count": 0
+}

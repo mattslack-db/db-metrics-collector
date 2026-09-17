@@ -1,0 +1,197 @@
+{
+  "collected_at": "2026-09-12T10:00:00.000000Z",
+  "name": "prod-rds",
+  "cloud": "aws",
+  "service": "rds",
+  "resource_scope": "arn:aws:rds:us-east-1:123456789012:db:prod-rds",
+  "window": {
+    "start": "2026-09-12T09:00:00.000000Z",
+    "end": "2026-09-12T10:00:00.000000Z",
+    "interval": "PT5M"
+  },
+  "inventory": {
+    "server": {
+      "name": "prod-rds",
+      "class": "db.m6i.large",
+      "allocated_storage_gb": 100,
+      "iops": 3000
+    },
+    "metric_scope": {
+      "namespace": "AWS/RDS",
+      "dimensions": {
+        "DBInstanceIdentifier": "prod-rds"
+      }
+    }
+  },
+  "metric_definitions": [],
+  "metrics": [
+    {
+      "name": "CPUUtilization",
+      "unit": "Percent",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 45.0,
+              "min": 10.0,
+              "max": 75.0,
+              "avg": 40.0,
+              "count": 12
+            },
+            "minimum": {
+              "latest": 12.0,
+              "min": 5.0,
+              "max": 30.0,
+              "avg": 15.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FreeableMemory",
+      "unit": "Bytes",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 4509715456,
+              "min": 2147483648,
+              "max": 6442450944,
+              "avg": 4294967296,
+              "count": 12
+            },
+            "minimum": {
+              "latest": 2684354560,
+              "min": 1610612736,
+              "max": 4294967296,
+              "avg": 3221225472,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "DatabaseConnections",
+      "unit": "Count",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 55.0,
+              "min": 20.0,
+              "max": 80.0,
+              "avg": 50.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 75.0,
+              "min": 30.0,
+              "max": 100.0,
+              "avg": 70.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ReadIOPS",
+      "unit": "Count/Second",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 550.0,
+              "min": 100.0,
+              "max": 1200.0,
+              "avg": 500.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 1000.0,
+              "min": 200.0,
+              "max": 1500.0,
+              "avg": 900.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "WriteIOPS",
+      "unit": "Count/Second",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 320.0,
+              "min": 50.0,
+              "max": 800.0,
+              "avg": 300.0,
+              "count": 12
+            },
+            "maximum": {
+              "latest": 650.0,
+              "min": 100.0,
+              "max": 1000.0,
+              "avg": 600.0,
+              "count": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FreeStorageSpace",
+      "unit": "Bytes",
+      "granularity": "PT5M",
+      "error": null,
+      "timeseries": [
+        {
+          "dimensions": {},
+          "points": [],
+          "summary": {
+            "average": {
+              "latest": 65498251264,
+              "min": 48318382080,
+              "max": 75161927680,
+              "avg": 64424509440,
+              "count": 12
+            },
+            "minimum": {
+              "latest": 40802189312,
+              "min": 32212254720,
+              "max": 53687091200,
+              "avg": 42949672960,
+              "count": 12
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
